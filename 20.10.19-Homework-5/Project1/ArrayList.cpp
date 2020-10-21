@@ -91,21 +91,22 @@ bool ArrayList::addAll(ArrayList& list)
 
 bool ArrayList::addAll(int index, ArrayList& list)
 {
+	if (index > count)
+	{
+		return false;
+	}
 	while (capacity < count + list.count)
 	{
 		expand(data,capacity);
 	}
-	int m = 0;
-	for (int i = count - 1; i > index - 1; --i)
+	for (int i = 0; i < list.count; i++)
 	{
-		data[list.count + count - index - m] = data[i];
-		++m;
+		data[count - 1 + list.count - i] = data[count - 1 - i];
 	}
-	for (int i = index; i < list.count + index; i++)
+	for (int i = 0; i < list.count; i++, index++)
 	{
-		add(i, list.get(i));
+		data[index] = list.data[i];
 	}
-	count += list.count;
 	return true;
 };
 
