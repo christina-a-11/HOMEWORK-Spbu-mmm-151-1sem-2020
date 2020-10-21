@@ -36,6 +36,19 @@ struct ArrayList {
 	/// </summary>
 	/// <param name="list">добавляемый список</param>
 	/// <returns>true, если получилось добавить, false - если не получилось</returns>
+	bool addAll(ArrayList& list);
+
+	/// <summary>
+	/// добавляет все элементы из списка list, начиная с позиции index.
+	/// все последующие элементы сдвигаются вправо
+	/// </summary>
+	/// <param name="list">добавляемый список</param>
+	/// <returns>true, если получилось добавить, false - если не получилось</returns>
+	bool addAll(int index, ArrayList& list);
+
+	/// <summary>
+	/// удалить все элементы из списка
+	/// </summary>
 	void clear();
 
 	/// <summary>
@@ -83,6 +96,6 @@ struct ArrayList {
 	/// <param name="index1">индекс первого элемента</param>
 	/// <param name="index2">индекс второго элемента</param>
 	/// <returns>true - все прошло хорошо, false - возникли проблемы</returns>
-	int swap(int index1, int index2);
+	bool swap(int index1, int index2);
 
 };

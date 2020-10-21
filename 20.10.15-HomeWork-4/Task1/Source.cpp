@@ -60,7 +60,7 @@ void processChoice(ArrayList& a, int choice)
 	break;
 	case 5:
 	{
-		if (a.isEmpty() == true)
+		if (a.isEmpty() != true)
 		{
 			int elem = 0;
 			cin >> elem;
@@ -74,27 +74,34 @@ void processChoice(ArrayList& a, int choice)
 	break;
 	case 6:
 	{
-		int b = 0;
-		cin >> b;
-		while (b != 0)
+		cout << "Сколько элементов добавить?\n";
+		int c = 0;
+		cin >> c;
+		ArrayList list(c);
+		srand(8);
+		for (int i = 0; i < c; i++)
 		{
-			a.add(b);
-			cin >> b;
+			list.add(rand() % 100);
 		}
+		a.addAll(list);
 	}
 	break;
 	case 7:
 	{
+		cout << "Сколько элементов добавить?\n";
+		int c = 0;
+		cin >> c;
+
+		cout << "С какой позиции добавлять?\n";
 		int ind = 0;
 		cin >> ind;
-		int m = 0;
-		cin >> m;
-		while (m != 0)
+		
+		ArrayList list(c);
+		for (int i = 0; i < c; i++)
 		{
-			a.add(ind, m);
-			cin >> m;
-			++ind;
+			list.add(rand() % 100);
 		}
+		a.addAll(ind, list);
 	}
 	break;
 	}

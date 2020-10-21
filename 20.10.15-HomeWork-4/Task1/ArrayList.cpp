@@ -41,27 +41,67 @@ bool ArrayList::add(int index, int element)
 {
 	if (count == capacity)
 	{
-		expand(data, capacity);
+		expand(data,capacity);
 	}
-	for(int i = count; i > index; i--)
+	for (int i = count; i > index; i--)
 	{
-		data[i] = data[i + 1];
+		data[i] = data[i - 1];
 	}
 	data[index] = element;
 	return true;
-}
+};
+bool ArrayList::addAll(ArrayList& list)
+{
+	for (int i = 0; i < list.count; ++i)
+	{
+		add(list.get(i));
+	}
+	return list.count != 0;
+};
+bool ArrayList::addAll(int index, ArrayList& list)
+{
+	if (index > count)
+	{
+		return false;
+	}
+	while (capacity < count + list.count)
+	{
+		expand(data,capacity);
+	}
+	for (int i = 0; i < list.count; i++)
+	{
+		data[count - 1 + list.count - i] = data[count - 1 - i];
+	}
+	for (int i = 0; i < list.count; i++, index++)
+	{
+		data[index] = list.data[i];
+	}
+	return true;
+};
 void  ArrayList::clear()
 {
-	delete[] data;
+	count = 0;
 }
 bool ArrayList::contains(int element)
 {
-	return true;
+	for (int i = 0; i < count; i++)
+	{
+		if (element == data[i])
+		{
+			return true;
+		}
+	}
+	return false;
 }
 int ArrayList::get(int index)
 {
-	return 0;
-}
+	if (index >= 0 && index < count)
+	{
+		return data[index];
+
+	}
+	return -1;
+};
 int ArrayList::indexOf(int element)
 {
 
@@ -76,10 +116,7 @@ int ArrayList::indexOf(int element)
 }
 bool ArrayList::isEmpty()
 {
-	if (count != 0) {
-		return 0;
-	}
-	else return 1;
+	return (count == 0);
 }
 void ArrayList::print()
 {
@@ -92,12 +129,37 @@ void ArrayList::print()
 }
 bool ArrayList::remove(int index)
 {
-	return true;
-}
-int ArrayList::swap(int index1, int index2)
+	if (index == count - 1)
+	{
+		count--;
+		return true;
+	}
+	else if (index < count - 1)
+	{
+		for (int i = index; i < count - 1; i++)
+		{
+			data[i] = data[i + 1];
+		}
+		--count;
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+};
+bool ArrayList::swap(int index1, int index2)
 {
-	int temp = data[index1];
-	data[index1] = data[index2];
-	data[index2] = temp;
-	return 0;
-}
+	if (index1 >= 0 && index1 < count && index2 >= 0 && index2 < count)
+	{
+		int tmp = 0;
+		tmp = data[index1];
+		data[index1] = data[index2];
+		data[index2] = tmp;
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+};
