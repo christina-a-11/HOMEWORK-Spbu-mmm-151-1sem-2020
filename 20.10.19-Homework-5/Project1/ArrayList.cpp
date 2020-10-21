@@ -93,7 +93,7 @@ bool ArrayList::addAll(int index, ArrayList& list)
 {
 	while (capacity < count + list.count)
 	{
-		expand();
+		expand(data,capacity);
 	}
 	int m = 0;
 	for (int i = count - 1; i > index - 1; --i)
@@ -101,10 +101,11 @@ bool ArrayList::addAll(int index, ArrayList& list)
 		data[list.count + count - index - m] = data[i];
 		++m;
 	}
-	for (int i = index; i < list.count; i++)
+	for (int i = index; i < list.count + index; i++)
 	{
 		add(i, list.get(i));
 	}
+	count += list.count;
 	return true;
 };
 
