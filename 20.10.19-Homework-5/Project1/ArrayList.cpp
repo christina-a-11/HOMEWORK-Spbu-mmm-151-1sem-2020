@@ -216,7 +216,7 @@ bool ArrayList::remove(int index)
 {
 	if (index == count - 1)
 	{
-		
+		count--;
 		return true;
 	}
 	else if (index < count - 1)
