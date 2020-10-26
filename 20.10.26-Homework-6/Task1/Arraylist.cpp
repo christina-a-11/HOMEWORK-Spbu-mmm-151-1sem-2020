@@ -5,7 +5,17 @@ ArrayList:: ~ArrayList()
 	delete[] data;
 	delete[] str;
 };
-
+Arraylist:: Arraylist (conts ArrayList& list)
+{
+count = list.count;
+capacity = list.capacity;
+str = nullptr;
+data = new int[capacity] {0};
+for (int i = 0; i < count; ++i)
+ {
+data[i] = list.data[i];
+  };
+};
 void ArrayList::expand()
 {
 
