@@ -11,30 +11,20 @@ double myFunction(double x, int n)
 	int k = -1;
 	if (x == 1)
 	{
-	return 0.785398163;
+		return 0.785398163;
 	}
 	else if (x == -1)
 	{
 		return -0.785398163;
 	}
-	else if (x >= 0)
+	else
 	{
-		while (x > 0.000000001 * i)
+		if (x < 0)
 		{
-			if (i % 2 != 0)
-			{
-				k *= -1;
-				ans = ans + k * (x / (double)i);
-			}
-			x *= x;
-			i++;
+			x *= -1;
+			k = 1;
 		}
-	}
-	else if (x < 0)
-	{
-		x *= -1;
-		k = 1;
-		while (x > 0.000000001 * i)
+		while (x >= 0.000000001 * i)
 		{
 			if (i % 2 != 0)
 			{
@@ -59,7 +49,6 @@ int main()
 	cin >> n;
 	cout << atan(x) << endl;
 	cout << fixed << setprecision(n) << myFunction(x, n) << endl;
-
 	system("pause>nul");
 	return 0;
 }
