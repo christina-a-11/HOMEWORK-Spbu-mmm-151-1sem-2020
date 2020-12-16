@@ -4,19 +4,19 @@ using namespace std;
 
 void printMenu()
 {
-	cout << "ÌÅÍÞ" << endl;
-	cout << "0 - Âûõîä èç ïðîãðàììû" << endl;
-	cout << "1 - Ââåñòè íåñêîëüêî ýëåìåíåòîâ ñ êëàâèàòóðû" << endl;
-	cout << "2 - Äîáàâèòü â ìàññèâ n ñëó÷àéíûõ ÷èñåë â ïðîìåæóòêå îò a äî b(n, a, b ââîäèòñÿ ñ êëàâèàòóðû)" << endl;
-	cout << "3 - Âûâåñòè ìàññèâ íà ýêðàí" << endl;
-	cout << "4 - Ïîèñê èíäåêñà ýëåìåíòà" << endl;
-	cout << "5 - Äîáàâëåíèå ìàññèâ ê ìàññèâó" << endl;
-	cout << "6 - Îáúåäèíåíèå ìàññèâîâ" << endl;
-	cout << "7 - Âñòàâêà ýëåìåíòà â ìàññèâ" << endl;
-	cout << "8 - Óäàëåíèå íåñêîëüêèõ ïîäðÿä èäóùèõ ýëåìåíòîâ ìàññèâà" << endl;
-	cout << "9 - Ïîèñê ïîäïîñëåäîâàòåëüíîñòè" << endl;
+	cout << "ÐœÐ•ÐÐ®" << endl;
+	cout << "0 - Ð’Ñ‹Ñ…Ð¾Ð´ Ð¸Ð· Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹" << endl;
+	cout << "1 - Ð’Ð²ÐµÑÑ‚Ð¸ Ð½ÐµÑÐºÐ¾Ð»ÑŒÐºÐ¾ ÑÐ»ÐµÐ¼ÐµÐ½ÐµÑ‚Ð¾Ð² Ñ ÐºÐ»Ð°Ð²Ð¸Ð°Ñ‚ÑƒÑ€Ñ‹" << endl;
+	cout << "2 - Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð² Ð¼Ð°ÑÑÐ¸Ð² n ÑÐ»ÑƒÑ‡Ð°Ð¹Ð½Ñ‹Ñ… Ñ‡Ð¸ÑÐµÐ» Ð² Ð¿Ñ€Ð¾Ð¼ÐµÐ¶ÑƒÑ‚ÐºÐµ Ð¾Ñ‚ a Ð´Ð¾ b(n, a, b Ð²Ð²Ð¾Ð´Ð¸Ñ‚ÑÑ Ñ ÐºÐ»Ð°Ð²Ð¸Ð°Ñ‚ÑƒÑ€Ñ‹)" << endl;
+	cout << "3 - Ð’Ñ‹Ð²ÐµÑÑ‚Ð¸ Ð¼Ð°ÑÑÐ¸Ð² Ð½Ð° ÑÐºÑ€Ð°Ð½" << endl;
+	cout << "4 - ÐŸÐ¾Ð¸ÑÐº Ð¸Ð½Ð´ÐµÐºÑÐ° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°" << endl;
+	cout << "5 - Ð”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¼Ð°ÑÑÐ¸Ð² Ðº Ð¼Ð°ÑÑÐ¸Ð²Ñƒ" << endl;
+	cout << "6 - ÐžÐ±ÑŠÐµÐ´Ð¸Ð½ÐµÐ½Ð¸Ðµ Ð¼Ð°ÑÑÐ¸Ð²Ð¾Ð²" << endl;
+	cout << "7 - Ð’ÑÑ‚Ð°Ð²ÐºÐ° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð² Ð¼Ð°ÑÑÐ¸Ð²" << endl;
+	cout << "8 - Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ Ð½ÐµÑÐºÐ¾Ð»ÑŒÐºÐ¸Ñ… Ð¿Ð¾Ð´Ñ€ÑÐ´ Ð¸Ð´ÑƒÑ‰Ð¸Ñ… ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°" << endl;
+	cout << "9 - ÐŸÐ¾Ð¸ÑÐº Ð¿Ð¾Ð´Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸" << endl;
 }
-/// Èíèöèàëèçàöèÿ ìàññèâà
+/// Ð˜Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ Ð¼Ð°ÑÑÐ¸Ð²Ð°
 int* initArray(int capacity)
 {
 	int* result = new int[capacity + 2]{ 0 };
@@ -25,13 +25,13 @@ int* initArray(int capacity)
 	return result;
 }
 
-/// Îñâîáîæäåíèå ïàìÿòè èç-ïîä ìàññèâà
+/// ÐžÑÐ²Ð¾Ð±Ð¾Ð¶Ð´ÐµÐ½Ð¸Ðµ Ð¿Ð°Ð¼ÑÑ‚Ð¸ Ð¸Ð·-Ð¿Ð¾Ð´ Ð¼Ð°ÑÑÐ¸Ð²Ð°
 void deleteArray(int* arr)
 {
 	delete[](arr - 2);
 }
 
-// Ðàñøèðåíèå ìàññèâà
+// Ð Ð°ÑÑˆÐ¸Ñ€ÐµÐ½Ð¸Ðµ Ð¼Ð°ÑÑÐ¸Ð²Ð°
 void expandArray(int*& arr)
 {
 	int* temp = initArray(2 * (*(arr - 1)));
@@ -44,7 +44,7 @@ void expandArray(int*& arr)
 	arr = temp;
 }
 
-//1 - Ââåñòè ýë ñ êëàâèàòóðû
+//1 - Ð’Ð²ÐµÑÑ‚Ð¸ ÑÐ» Ñ ÐºÐ»Ð°Ð²Ð¸Ð°Ñ‚ÑƒÑ€Ñ‹
 void addElement(int*& arr, int element)
 {
 	if (*(arr - 2) == *(arr - 1))
@@ -56,7 +56,7 @@ void addElement(int*& arr, int element)
 
 }
 
-// 2 - äîáàâèòü n ýëåìåíòîâ
+// 2 - Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ n ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²
 void addRandomElements(int*& arr, int n, int a, int b)
 {
 	for (int i = 0; i < n; ++i)
@@ -64,7 +64,7 @@ void addRandomElements(int*& arr, int n, int a, int b)
 		addElement(arr, rand() % (b - a + 1) + a);
 	}
 }
-// 3 - Âûâîä ìàññèâà
+// 3 - Ð’Ñ‹Ð²Ð¾Ð´ Ð¼Ð°ÑÑÐ¸Ð²Ð°
 void printArray(int* arr)
 {
 	cout << "[" << *(arr - 2) << "/" << *(arr - 1) << "] {";
@@ -74,41 +74,41 @@ void printArray(int* arr)
 	}
 }
 
-//4 - ïîèñê èíäåêñà ýë
+//4 - Ð¿Ð¾Ð¸ÑÐº Ð¸Ð½Ð´ÐµÐºÑÐ° ÑÐ»
 int search(int* arr, int element, int start = 0)
 {
 	for (int i = start; i < *(arr - 1); i++) {
-		if (arr[i] == element) {
+		if (*(arr + i) == element) {
 			return i;
 		}
 	}
 	return -1;
-} // 5 - Äîáàâëåíèå ìàññèâà ýëåìåíòîâ.
+} // 5 - Ð”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¼Ð°ÑÑÐ¸Ð²Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð².
 
-//5 - äîáàâëåíèå ê ìàññèâó
+//5 - Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ðº Ð¼Ð°ÑÑÐ¸Ð²Ñƒ
 void add(int*& arr, int* addedArr)
 {
 	for (int i = 0; i < *(addedArr - 2); i++) {
-		addElement(arr, addedArr[i]);
+		addElement(arr, *(addedArr + i))
 	}
 }
-// 6 - Îáúåäèíåíèå äâóõ ìàññèâîâ â îäèí.
+// 6 - ÐžÐ±ÑŠÐµÐ´Ð¸Ð½ÐµÐ½Ð¸Ðµ Ð´Ð²ÑƒÑ… Ð¼Ð°ÑÑÐ¸Ð²Ð¾Ð² Ð² Ð¾Ð´Ð¸Ð½.
 int* unify(int* a, int* b)
 {
-	int *result = initArray(a[-2] + b[-2]);
+	int *result = initArray(*(a -2) + *(b - 2));
 	int j = 0;
 	int k = 0;
-	for (int i = 0; i < a[-2] + b[-2] - 1; i++)
+	for (int i = 0; i < *(a - 2) +*(b - 2) - 1; i++)
 	{
 		
 		if (i % 2 == 0) 
 		{
-			addElement(result, a[j]);
+			addElement(result, *(a + j));
 			j++;
         }
 		else
 		{
-			addElement(result, b[k]);
+			addElement(result, *(b + k));
 			k++;
 		}
 	}
@@ -117,8 +117,8 @@ int* unify(int* a, int* b)
 	a = result;
 	return result;
 }
-// 7 - Âñòàâêà ýëåìåíòà â ìàññèâ. Ó âñòàâëÿåìîãî ýëåìåíòà â èòîãå äîëæåí áûòü èíäåêñ index,  
-//âñå ïîñëåäóþùèå ýëåìåíòû ñäâèãàþòñÿ íà 1 âïðàâî.
+// 7 - Ð’ÑÑ‚Ð°Ð²ÐºÐ° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð² Ð¼Ð°ÑÑÐ¸Ð². Ð£ Ð²ÑÑ‚Ð°Ð²Ð»ÑÐµÐ¼Ð¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð² Ð¸Ñ‚Ð¾Ð³Ðµ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð±Ñ‹Ñ‚ÑŒ Ð¸Ð½Ð´ÐµÐºÑ index,  
+//Ð²ÑÐµ Ð¿Ð¾ÑÐ»ÐµÐ´ÑƒÑŽÑ‰Ð¸Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ ÑÐ´Ð²Ð¸Ð³Ð°ÑŽÑ‚ÑÑ Ð½Ð° 1 Ð²Ð¿Ñ€Ð°Ð²Ð¾.
 int insert(int*& a, int index, int element)
 {
 	if (index > * (a - 1)) {
@@ -126,15 +126,15 @@ int insert(int*& a, int index, int element)
 	}
 	else {
 
-		addElement(a, a[*(a - 1) - 1]);
+		addElement(a, *(a + *(a - 1) - 1));
 		for (int i = *(a - 1) - 2; i > index; i--) {
-			a[i] = a[i - 1];
+			*(a + i) = *(a + i - 1);
 		}
-		a[index] = element;
+		*(a + index) = element;
 	}
 	return 0;
 }
-// 8 - óäàëåíèå öåïî÷êè ýëåìåíòîâ
+// 8 - ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ðµ Ñ†ÐµÐ¿Ð¾Ñ‡ÐºÐ¸ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²
 int deleteGroup(int*& a, int startIndex, int count)
 {
 	if (startIndex + count > * (a - 2)) {
@@ -150,7 +150,7 @@ int deleteGroup(int*& a, int startIndex, int count)
 		int tmp = 0;
 		for (int i = startIndex; i < *(a - 2) - count + 1; i++)
 		{
-			a[i] = a[startIndex + count + tmp];
+			*(a + i) = *(a + startIndex + count + tmp);
 			tmp++;
 		}
 		*(a - 2) -= count;
@@ -159,13 +159,13 @@ int deleteGroup(int*& a, int startIndex, int count)
 
 }
 int proverca(int* a, int* b, int k, int l) {
-	if (l == b[-2])
+	if (l == *(b - 2))
 	{
 		return 1;
 	}
 	else
 	{
-		if (a[k] == b[l])
+		if (*(a + k) == *(b + l))
 		{
 			proverca(a, b, k + 1, l + 1);
 		}
@@ -176,10 +176,10 @@ int proverca(int* a, int* b, int k, int l) {
 	}
 }
 
-//9 - Ïîèñê ïîäïîñëåäîâàòåëüíîñòè â ìàññèâå
+//9 - ÐŸÐ¾Ð¸ÑÐº Ð¿Ð¾Ð´Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ
 int subSequence(int* a, int* b)
 {
-	for (int i = 0; i < a[-2]; i++) {
+	for (int i = 0; i < *(a - 2); i++) {
 		if (proverca(a, b, i, 0) == 1)
 		{
 			return i;
@@ -222,7 +222,7 @@ void processChoice(int*& arr1, int*& arr2, int choice) {
 	case 5:
 	{
 		int n = 0;
-		cout << "Ââåäèòå êîëè÷åñâî ýëåìåíòîâ âòîðîãî ìàññèâà" << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÐ²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð²Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð°" << endl;
 		cin >> n;
 		addRandomElements(arr2, n, 0, 100);
 		add(arr1, arr2);
@@ -232,7 +232,7 @@ void processChoice(int*& arr1, int*& arr2, int choice) {
 	case 6:
 	{
 		int n = 0;
-		cout << "Ââåäèòå êîëè÷åñâî ýëåìåíòîâ âòîðîãî ìàññèâà" << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÐ²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð²Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð°" << endl;
 		cin >> n;
 		addRandomElements(arr2, n, 0, 100);
 		unify(arr1, arr2);
@@ -260,9 +260,9 @@ void processChoice(int*& arr1, int*& arr2, int choice) {
 	case 9:
 	{
 		int n = 0;
-		cout << "Ââåäèòå äëèíó ïîäïîñëåäîâàòëüíîñòè" << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð»Ð¸Ð½Ñƒ Ð¿Ð¾Ð´Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚Ð»ÑŒÐ½Ð¾ÑÑ‚Ð¸" << endl;
 		cin >> n;
-		cout << "Ââåäèòå ïîäïîñëåäîâàòåëüíîñòü";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ð¾Ð´Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚ÑŒ";
 		for (int i = 0; i < n; i++)
 		{
 			int temp;
@@ -290,6 +290,6 @@ int main() {
 	deleteArray(a);
 	deleteArray(b);
 
-	system("pause>nul");
+	//system("pause>nul");
 	return 0;
 }
