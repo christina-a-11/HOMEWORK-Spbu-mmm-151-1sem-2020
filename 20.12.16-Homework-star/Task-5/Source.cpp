@@ -8,7 +8,10 @@ int main()
 	cin >> k >> m >> n;
 	int t = 0;
 	t = n / k * m * 2;
-	if ((n % k) > 0) t += m;
+	if ((n % k) > 0)
+	{
+	  t += m;
+	}
 	cout << t;
 	system("pause>nul");
 	return 0;
